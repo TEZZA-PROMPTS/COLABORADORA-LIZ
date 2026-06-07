@@ -1,6 +1,6 @@
 TEZZA-PROMPTS 🧠🔒
 
-Repositório privado de prompts de IA desenvolvido por TEZZA-PROMPTS, com colaboração de Phanie, destinado exclusivamente ao uso interno e ao canal oficial.
+Repositório privado de prompts de IA desenvolvido por TEZZA-PROMPTS, com colaboração de Liz, destinado exclusivamente ao uso interno e ao canal oficial.
 
 Este projeto não é open source e não autoriza redistribuição, repostagem ou reutilização em outros canais, sejam públicos ou privados.
 
@@ -13,7 +13,7 @@ Uso exclusivo no canal TEZZA-PROMPTS
 Testes, ajustes e refinamento de prompts de IA
 Centralização do fluxo criativo
 
-Todos os prompts aqui presentes são de autoria da TEZZA-PROMPTS e fazem parte de um processo contínuo de desenvolvimento, podendo contar com contribuições da colaboradora Phanie.
+Todos os prompts aqui presentes são de autoria da TEZZA-PROMPTS e fazem parte de um processo contínuo de desenvolvimento, podendo contar com contribuições da colaboradora Liz.
 
 📦 Conteúdo
 

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- TÍTULO LIMPO PARA O LINK -->
+  <title>LIZ • TEZZA PROMPTS</title>
+
+  <!-- CONFIGURAÇÃO PARA O LINK FICAR COMPACTO -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LIZ • TEZZA PROMPTS">
+  <meta property="og:title" content="LIZ • TEZZA PROMPTS">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tezza-prompts.github.io/COLABORADORA-LIZ/COPIAR%20GEMINI.html">
+  <meta name="description" content="TEZZA PROMPTS OFICIAL">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500&family=Lora:ital,wght@0,400;0,500;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Estilo para o cursor personalizado com a flor branca */
+    html, body, a, button {
+      cursor: url('https://i.ibb.co/Yn7bsxx/Chat-GPT-Image-7-de-jun-de-2026-19-46-02.png') 64 64, auto;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url('https://i.ibb.co/fY3W3cv9/710156920-1568749581287649-6731854580978562828-n-upscayl-5x-digital-art-4x.png');
+      background-size: cover;
+      background-position: center;
+      filter: blur(4px) brightness(1.05);
+      transform: scale(1.05);
+      background-repeat: no-repeat;
+    }
+
+    body {
+      font-family: 'Poppins', 'Lora', serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(253, 250, 243, 0.45);
+      min-height: 100vh;
+      color: #3e4a3b;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+
+    .title-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .title-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -45px;
+      left: -35px;
+      width: 100px;
+      height: 100px;
+      background-image: url('https://i.ibb.co/twhrqvXX/Chat-GPT-Image-9-de-jun- de-2026-22-06-20.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+      z-index: 3;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      font-size: 4rem;
+      color: #5c6b58;
+      letter-spacing: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+      position: relative;
+      z-index: 2;
+    }
+
+    header p {
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 10px;
+      color: #5c6b58;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .prompt-box {
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 150px 15px 150px 15px;
+      padding: 60px 50px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 192, 203, 0.2);
+      position: relative;
+      max-width: 600px;
+      width: 100%;
+      overflow: visible;
+    }
+
+    .prompt-box::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      background-image: url('https://i.ibb.co/20B026Xd/Chat-GPT-Image-7-de-jun-de-2026-19-39-09.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .prompt-box::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background-image: url('https://i.ibb.co/20B026Xd/Chat-GPT-Image-7-de-jun-de-2026-19-39-09.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+      transform: rotate(180deg);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .prompt-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      margin-bottom: 25px;
+      font-size: 1.3rem;
+      color: #5c6b58;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pre-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 40px 5px 40px 5px;
+      border: 1px solid #eef2ed;
+      font-size: 1rem;
+      line-height: 1.6;
+      user-select: text;
+      color: #444;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      transition: opacity 0.3s ease;
+    }
+
+    .copy-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      background: #5c6b58;
+      color: white;
+      padding: 20px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      display: none;
+      z-index: 3;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 0.4s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    button {
+      display: inline-block;
+      min-width: 220px;
+      margin-top: 30px;
+      background: #5c6b58;
+      color: #ffffff;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    button:hover {
+      background: #4a5747;
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(92, 107, 88, 0.2);
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #7d8c7a;
+      font-style: italic;
+      position: relative;
+      z-index: 2;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.8rem;
+      color: #5c6b58;
+      opacity: 0.8;
+      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* Partículas usando a nova flor branca */
+    .flower-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url('https://i.ibb.co/Yn7bsxx/Chat-GPT-Image-7-de-jun-de-2026-19-46-02.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="background-overlay"></div>
+
+<header>
+  <div class="title-wrapper">
+    <h1>LIZ</h1>
+  </div>
+  <p>TEZZA PROMPTS OFICIAL</p>
+</header>
+
+<div class="container">
+
+  <div class="prompt-box">
+    <div class="prompt-title">LIZ COLABORADORA</div>
+
+    <div class="pre-container">
+      <pre id="prompt1">
+GEMINI   [MODO]
+        
+Ultra-realistic cinematic avatar 3D female portrait, Blender Cycles render in CGI, inspired by Seedream 5.0 beauty realism and high-end IMVU/The Sims virtual aesthetics. Clearly a fictional digital avatar and not a real photograph. Hyper-detailed virtual influencer design with stylized CGI beauty proportions, luxury editorial aesthetics, advanced cinematic lighting, ultra-polished 3D rendering, and “TEZZA PROMPTS” text at the bottom center in elegant minimalist typography.
+
+CAMERA & COMPOSITION
+
+Vertical 9:16 aspect ratio lifestyle portrait. Medium full-body framing from the knees to the top of the head. Eye-level perspective with a slightly frontal angle, preserving the original composition. Subject seated at a small round marble café table on an outdoor Parisian-style terrace. Sharp focus on the subject while the café façade, surrounding tables and seated guests remain naturally softened in the background, maintaining the original perspective, framing and depth of field.
+
+POSE & BODY POSITIONING
+
+Subject seated gracefully on a woven café chair with the body angled slightly toward the table. Legs naturally crossed at the knees beneath the table. Left forearm resting comfortably near the tabletop while the left hand gently supports a white porcelain cup. Right hand delicately holding a spoon inside the cup with relaxed fingers. Shoulders relaxed, torso upright and posture elegant, preserving the exact pose and body positioning from the reference.
+
+HEAD POSITION & GAZE
+
+Head turned gently toward the left with the chin slightly lowered. Eyes looking softly away from the camera toward the left side of the café. Maintain the exact head angle, gaze direction and relaxed neck posture visible in the reference.
+
+FACIAL EXPRESSION
+
+Soft genuine smile with naturally relaxed cheeks, calm eyes and lightly parted glossy lips. Preserve the subtle, effortless expression exactly as shown without exaggeration or reinterpretation.
+
+FACE & IDENTITY
+
+Adult female CGI avatar preserving the exact facial identity of the reference. Maintain the original forehead proportions, face shape, jawline, cheekbone structure, chin shape, eyebrow shape, eye shape, eye spacing, eye angle, nose structure, lip shape, lip volume, skin tone and overall facial proportions with maximum fidelity. Preserve the original makeup, facial harmony and visual identity exactly as shown while maintaining stylized cinematic CGI realism instead of photoreal human rendering.
+
+HAIR
+
+Long black hair preserving the exact hairstyle structure from the reference. Deep side part with large loose glamorous waves cascading over one shoulder, extending well below the waist with abundant volume. Hair features a fluid natural caimento, soft movement, silky reflections, realistic strand definition and polished Blender-style hair simulation while maintaining the exact wave pattern and hairstyle arrangement visible in the reference. Black sunglasses rest naturally on top of the head in the same position as shown.
+
+ACCESSORIES & DETAILS
+
+Small gold floral earrings. Thin gold chain necklace. Slim gold ring on the right hand. Black cat-eye heels decorated with pearl trim. Black sunglasses resting on top of the head. White porcelain coffee cup and saucer, polished silver coffee pot, glass dessert topped with whipped cream, golden croissant on a white plate and elegant marble café table. Preserve every visible accessory and tabletop object exactly as shown.
+
+OUTFIT
+
+Pale butter-yellow oversized tailored blazer worn as a blazer dress with a deep V-shaped neckline. Long structured sleeves, clean lapels, relaxed tailored silhouette and premium fabric with realistic folds and subtle texture. Preserve the exact garment construction, fit, color, proportions and fabric appearance visible in the reference.
+
+BODY & PHYSIQUE
+
+Slim feminine physique with natural body proportions, softly defined waistline, graceful shoulders, elegant legs and relaxed posture. Preserve the exact body proportions and positioning without modification or exaggeration.
+
+SKIN & REALISM
+
+Ultra-detailed Seedream 5.0 skin rendering with realistic pores, natural skin texture, subtle hydrated sheen and physically accurate subsurface scattering. Soft daylight creates delicate highlights across the face, neck, hands and legs while maintaining realistic Blender-style material definition without excessive smoothing.
+
+LIGHTING
+
+Soft natural daytime lighting with gentle ambient illumination from the open café terrace. Balanced highlights and soft shadows preserve the exact lighting direction, intensity, warmth and natural reflections visible in the reference without alteration.
+
+ENVIRONMENT
+
+Elegant Parisian-style outdoor café terrace with woven bistro chairs, round white marble tables, classic storefront façade, open entrance, surrounding guests dining outdoors and refined European street atmosphere. Preserve the exact environment, composition, background elements and visual arrangement shown in the reference.
+
+MOOD & AESTHETIC
+
+Elegant European café lifestyle aesthetic with refined daytime luxury, timeless femininity and relaxed sophistication. Preserve the authentic atmosphere, visual storytelling and understated editorial mood of the original reference without reinterpretation.
+
+STYLE & RENDER QUALITY
+
+Ultra-photorealistic Blender Cycles CGI render, cinematic realism, Seedream 5.0 beauty rendering, 8K UHD quality, physically accurate lighting and materials, realistic skin micro-detail, IMVU-inspired beauty repaint style, high-fidelity feminine avatar rendering, realistic depth of field, glossy beauty aesthetic, polished virtual influencer atmosphere, advanced ray tracing, realistic reflections, luxury editorial lighting, ultra-clean cinematic render quality, and clearly fictional CGI avatar aesthetics instead of a real photograph.
+
+        
+</pre>
+      <div id="copySuccess" class="copy-message">
+        PROMPT COPIADO!<br>MARQUE @lizs.tos
+      </div>
+    </div>
+
+    <button id="copyBtn" onclick="copyAndAnimate('prompt1')">Copiar Prompt</button>
+    <div class="hint">Se o botão não funcionar, selecione o texto e copie manualmente.</div>
+  </div>
+
+</div>
+
+<footer>
+  MARQUE @lizs.tos<br>
+  LIZ • TEZZA PROMPTS — Conteúdo protegido.
+</footer>
+
+<script>
+  function copyAndAnimate(id) {
+    copyFallback(id);
+    createHeartEffect();
+  }
+
+  function copyFallback(id) {
+    const el = document.getElementById(id);
+    const msg = document.getElementById('copySuccess');
+    
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    
+    try {
+      document.execCommand('copy');
+      el.style.opacity = '0.1';
+      msg.style.display = 'block';
+      setTimeout(() => {
+        el.style.opacity = '1';
+        msg.style.display = 'none';
+      }, 3000);
+    } catch (err) {
+      alert('Erro ao copiar. Por favor, copie manualmente.');
+    }
+    selection.removeAllRanges();
+  }
+
+  function createHeartEffect() {
+    const btn = document.getElementById('copyBtn');
+    const rect = btn.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const particlesCount = 40;
+    const heartScale = 15;
+
+    for (let i = 0; i < particlesCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'flower-particle';
+      document.body.appendChild(particle);
+
+      const angle = (i / particlesCount) * 2 * Math.PI;
+      const x = 16 * Math.pow(Math.sin(angle), 3);
+      const y = -(13 * Math.cos(angle) - 5 * Math.cos(2 * angle) - 2 * Math.cos(3 * angle) - Math.cos(4 * angle));
+
+      particle.style.left = centerX + 'px';
+      particle.style.top = centerY + 'px';
+      particle.style.opacity = '1';
+      particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
+
+      particle.offsetHeight;
+
+      const targetX = x * heartScale;
+      const targetY = y * heartScale;
+      const randomRotation = Math.random() * 360;
+
+      particle.style.transform = `translate(calc(-50% + ${targetX}px), calc(-50% + ${targetY}px)) scale(${0.8 + Math.random()}) rotate(${randomRotation}deg)`;
+      particle.style.opacity = '0';
+
+      setTimeout(() => {
+        particle.remove();
+      }, 1500);
+    }
+  }
+</script>
+
+</body>
+</html>
